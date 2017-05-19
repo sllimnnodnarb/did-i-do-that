@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.gvtr {
+ margin-left: -20px;
+ margin-right: 7px;
+ margin-bottom: 8px;
+ margin-top: 0px;
+ box-shadow: 7px 7px 5px grey;
+ position: relative;
+ float: right;
+}
+
+.bfont {
+  color: #000;
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.bfont:hover {
+  color: black;
+  text-decoration: none;
+  border: 2px solid #A9F9FE;
+  font-weight: 900;
+}
+
+
+.bbfont {
+  color: #000;
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.bbfont:hover {
+  color: black;
+  text-decoration: none;
+  border: 2px solid #A9F9FE;
+  font-weight: 900;
+}
+
+.cfont {
+  color: #000;
+  border: 2px solid #A9F9FE;
+  border-radius: 4px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.cfont:hover {
+  color: black;
+  text-decoration: none;
+  border: 2px solid #FFF;
+}
+
+.ifont {
+  font-style: italic;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 44pt;
+  text-shadow: -2px 2px #FFF;
+}
+
+.on-bottom {
+  border-bottom: 2px solid #FFF;
+  margin-top: 2px;
+  margin-left: -10px;
+  margin-bottom: 4px;
+}
+
+.on-left {
+  border-left: 2px solid #FFF;
+}
+
+.awid {
+  width: 25%;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 5px;
+}
+
+.bwid {
+  margin-left: 17%;
+  position: relative;
+  margin-top: 5%;
+}
+
+.bline {
+  position: relative;
+}
+
+.aimg {
+  max-width: 100%;
+  min-width: 50%;
+  height: auto;
+  width: auto\9;
+}
+
+.center {
+  width: 33%;
+  margin-left: 33%;
+  margin-top: 15%;
+}
+
+.cc {
+  text-align: center;
+}
+
+body {
+  background-color: #A9F9FE;
+}
+
+ul.nav.nav-tabs {
+  background-color: #FFF;
+  width: 100%;
+  height: 60px;
+  margin: 0px;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.pull-right {
+  margin-right: 15px;
+}
