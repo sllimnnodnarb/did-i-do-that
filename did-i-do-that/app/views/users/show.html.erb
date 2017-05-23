@@ -1,13 +1,28 @@
 <div class="container">
   <div class="row">
-  <div class="col-md-8">
-    <div class="media">
-      <div class="media-body">
-        <h2 class="media-heading"><%= current_user.email %></h2>
+    <div class="col-md-8">
+      <div class="media">
+        <br>
+        <% avatar_url = @user.avatar_url(128) %>
+        <div class="pull-left">
+          <%= image_tag avatar_url, class: 'pull-left' %>
+        </div>
+
         <small>
+          <!--%= pluralize(@user.lists.count, 'list') %-->
         </small>
+        <div class="container">
+
+        </div>
+        <div class="row">
+          <div class="media-body">
+            <h2 class="media-heading pull-right ifont rp">Did I do that?</h2>
+          </div>
+          <div class="col-md-4 on-top abs"><br>
+            <h4>Oh the frustration of forgetting what needs to be done!  Life is hectic.  Making to-do lists is an effective method of getting things done. If you find yourself wondering<br><strong class="ifont2">Did i do that?</strong><br> Then make a list.<br>  Begin!</strong><h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>

@@ -77,6 +77,20 @@
   text-shadow: -2px 2px #FFF;
 }
 
+.ifont2 {
+  font-style: italic;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 14pt;
+  text-shadow: -2px 2px #FFF;
+}
+
+.on-top {
+  border-top: 2px solid #FFF;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
 .on-bottom {
   border-bottom: 2px solid #FFF;
   margin-top: 2px;
@@ -86,6 +100,10 @@
 
 .on-left {
   border-left: 2px solid #FFF;
+}
+
+.on-right {
+  border-right: 2px solid #FFF;
 }
 
 .awid {
@@ -144,4 +162,14 @@ ul {
 
 .pull-right {
   margin-right: 15px;
+}
+
+.rp {
+  padding-right: 20px;
+}
+
+.abs {
+  position: absolute;
+  min-width: 100px;
+  max-width: 200px;
 }
