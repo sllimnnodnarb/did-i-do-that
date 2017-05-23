@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  devise_for :views
+
   get 'users/new'
 
   get 'users/show'
@@ -9,8 +12,5 @@ Rails.application.routes.draw do
   get 'welcome/about'
 
   root 'welcome#index'
-
-  devise_for :users
-  devise_for :views
 
 end
