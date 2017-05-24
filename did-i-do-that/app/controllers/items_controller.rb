@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-before_action :authenticate_user!
+
   def index
     @items = Item.all
   end
@@ -11,9 +11,7 @@ before_action :authenticate_user!
   end
 
   def new
-    @user = current_user
-    @item = Item.new(item_params)
-    @item.user = current_user
+    @item = Item.new
   end
 
   def create
@@ -31,11 +29,11 @@ before_action :authenticate_user!
   end
 
   def edit
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:user_id])
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:user_id])
     @item.assign_attributes(item_params)
 
     if @item.save
@@ -47,10 +45,21 @@ before_action :authenticate_user!
      end
    end
 
+   def destroy
+     @item = Item.find(params[:id])
+     if @item.destroy
+       flash[:notice] = "\"#{@item.name}\" compete and successfully removed from your to-do list."
+       redirect_to root_path
+     else
+       flash.now[:alert] = "There was an error marking the item complete, try again."
+       render :show
+     end
+   end
+
   private
 
   def item_params
-    params.permit(:name, :user_id)
+    params.require(:item).permit(:name, :user_id)
   end
 
 end

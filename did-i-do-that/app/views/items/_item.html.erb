@@ -2,7 +2,7 @@
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
-        <%= link_to item.name, item_path(item) %>
+        <%= link_to item.name, item_path(item), method: :delete, class: "glyphicon glyphicon-ok" %>
       </h4>
       <small>
         submitted <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %> <br>
