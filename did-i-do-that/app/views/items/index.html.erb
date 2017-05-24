@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="ifont">To-Do Items</h1>
+<br>
+<%= link_to "Create a New To-Do Item", new_item_path, class: 'btn btn-default' %>
+<br><br>
+<div class="row">
+  <div class="col-md-8">
+      <% @items.each do |item| %>
+        <%= render partial: 'item', locals: { item: item } %>
+      <% end %>
+  </div>
+</div>
+</div>

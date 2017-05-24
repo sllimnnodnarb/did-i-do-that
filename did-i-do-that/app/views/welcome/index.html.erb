@@ -10,6 +10,13 @@
         <div class="on-bottom"></div>
         <p>Life is busy.  Make a checklist.  Live well.</p>
       </div>
+      <div class="container on-left cc">
+
+          <%= render current_user.items %>
+
+        <div class="hightop cc">
+          <%= link_to "Add a to-do item", new_item_path, class: 'btn-lg dfont' %>
+        </div>
+      </div>
     </div>
   </div>
-</div>

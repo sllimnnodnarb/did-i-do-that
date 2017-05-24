@@ -69,6 +69,18 @@
   border: 2px solid #FFF;
 }
 
+.dfont {
+  color: black;
+  text-decoration: none;
+  border: 2px solid #FFF;
+}
+
+.dfont:hover {
+  color: black;
+  background-color: #FFF;
+  text-decoration: none;
+}
+
 .ifont {
   font-style: italic;
   font-family: 'Shadows Into Light', cursive;
@@ -144,6 +156,14 @@ body {
   background-color: #A9F9FE;
 }
 
+.bgwh {
+  background-color: #FFF;
+  opacity: 0.2%;
+
+  width: 35%;
+  margin-right: 5%;
+}
+
 ul.nav.nav-tabs {
   background-color: #FFF;
   width: 100%;
@@ -172,4 +192,12 @@ ul {
   position: absolute;
   min-width: 100px;
   max-width: 200px;
+}
+
+.hightop {
+  margin-top: 5%;
+  margin-left: 0%;
+  position: relative;
+  float: left;
+  margin-bottom: 5%;
 }

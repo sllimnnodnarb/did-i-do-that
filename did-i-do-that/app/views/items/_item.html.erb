@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to item.name, item_path(item) %>
+      </h4>
+      <small>
+        submitted <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %> <br>
+      </small><br>
+    </div>
+  </div>
+</div>

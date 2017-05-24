@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <%= form_for [@item] do |f| %>
+        <% if @item.errors.any? %>
+          <div class="alert alert-danger">
+            <h4><%= pluralize(@item.errors.count, "error") %></h4>
+            <ul>
+              <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control', placeholder: "Enter to-do item" %><br>
+
+          <%= f.submit "Add to list", class: 'btn btn-default' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
