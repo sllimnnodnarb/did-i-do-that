@@ -7,19 +7,20 @@
         <div class="pull-left">
           <%= image_tag avatar_url, class: 'pull-left' %>
         </div>
-
         <small>
-          <!--%= pluralize(@user.lists.count, 'list') %-->
+          <%= pluralize(@user.items.count, 'to-do items') %>
         </small>
         <div class="container">
-
         </div>
         <div class="row">
           <div class="media-body">
-            <h2 class="media-heading pull-right ifont rp">Did I do that?</h2>
+            <h2 class="media-heading pull-right ifont pull-right rp on-bottom">Did I do that?</h2>
           </div>
-          <div class="col-md-4 on-top abs"><br>
+          <div class="col-md-4 abs"><br>
             <h4>Oh the frustration of forgetting what needs to be done!  Life is hectic.  Making to-do lists is an effective method of getting things done. If you find yourself wondering<br><strong class="ifont2">Did i do that?</strong><br> Then make a list.<br>  Begin!</strong><h4>
+          </div>
+          <div class="cwid  on-left floattop">
+            <%= render current_user.items %>
           </div>
         </div>
       </div>

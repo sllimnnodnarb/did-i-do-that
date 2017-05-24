@@ -16,6 +16,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.txtclr {
+  color: black;
+}
+
 .gvtr {
  margin-left: -20px;
  margin-right: 7px;
@@ -79,8 +83,28 @@
   color: black;
   background-color: #FFF;
   text-decoration: none;
+  border: 2px solid #FFF;
 }
 
+.efont {
+  color: black;
+  text-decoration: none;
+  border: 2px solid #FFF;
+}
+
+.efont:hover {
+  color: black;
+
+  background-color: #FFF;
+  text-decoration: line-through;
+  border: 2px solid #FFF;
+}
+
+.ffont {
+  color: black;
+  background-color: #FFF;
+  text-decoration: none;
+}
 .ifont {
   font-style: italic;
   font-family: 'Shadows Into Light', cursive;
@@ -131,6 +155,13 @@
   margin-top: 5%;
 }
 
+.cwid {
+  margin-left: 215px;
+  position: relative;
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
 .bline {
   position: relative;
 }
@@ -158,10 +189,12 @@ body {
 
 .bgwh {
   background-color: #FFF;
-  opacity: 0.2%;
-
-  width: 35%;
+  opacity: 0.8;
+  width: 100%;
   margin-right: 5%;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: inherit;
 }
 
 ul.nav.nav-tabs {
@@ -182,10 +215,12 @@ ul {
 
 .pull-right {
   margin-right: 15px;
+  text-align: right;
 }
 
 .rp {
-  padding-right: 20px;
+  padding-right: 15%;
+  width: 100%;
 }
 
 .abs {
@@ -200,4 +235,22 @@ ul {
   position: relative;
   float: left;
   margin-bottom: 5%;
+}
+
+.floattop {
+  position: realtive;
+  float: top;
+}
+
+.lefttab {
+  margin-left: 10px;
+}
+
+.special {
+  color: black;
+}
+.special:hover {
+  color: black;
+  cursor: url(http://vietnamcondotel.net/wp-content/uploads/2015/12/icon-check-150x150.png);
+  text-decoration: none;
 }

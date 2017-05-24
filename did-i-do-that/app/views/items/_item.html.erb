@@ -1,8 +1,9 @@
 <div class="container">
   <div class="media">
     <div class="media-body">
-      <h4 class="media-heading">
-        <%= link_to item.name, item_path(item), method: :delete, class: "glyphicon glyphicon-ok" %>
+      <h4 class="media-heading font">
+        <%= link_to "", item_path(item), method: :delete, class: "glyphicon glyphicon-unchecked txtclr special" %>
+        <%= link_to item.name, item_path(item), class: "lefttab txtclr special" %>
       </h4>
       <small>
         submitted <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %> <br>
