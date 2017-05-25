@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
     @user = current_user
     @item = Item.find(params[:id])
     @items = Item.all
+    @old = []
   end
 
   def new
@@ -47,8 +48,10 @@ class ItemsController < ApplicationController
 
    def destroy
      @item = Item.find(params[:id])
+     @old = []
+     @old << @item.name.dup
      if @item.destroy
-       flash[:notice] = "\"#{@item.name}\" compete and successfully removed from your to-do list."
+       flash[:notice] = "\"#{@item.name}\" was successfully removed from your to-do list."
        redirect_to root_path
      else
        flash.now[:alert] = "There was an error marking the item complete, try again."

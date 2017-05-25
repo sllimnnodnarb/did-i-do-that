@@ -14,13 +14,16 @@
         </div>
         <div class="row">
           <div class="media-body">
-            <h2 class="media-heading pull-right ifont pull-right rp on-bottom">Did I do that?</h2>
+            <h2 class="media-heading ifont cc on-bottom">Productivity</h2><br>
+            <h4 class="media-heading cc iifont cc on-bottom">An at-a-glance history of every task you've ever done. <strong>In your entire life...</strong></h4><br>
           </div>
-          <div class="col-md-4 abs"><br>
+          <div class="col-md-4 abs">
             <h4>Oh the frustration of forgetting what needs to be done!  Life is hectic.  Making to-do lists is an effective method of getting things done. If you find yourself wondering<br><strong class="ifont2">Did i do that?</strong><br> Then make a list.<br>  Begin!</strong><h4>
           </div>
-          <div class="cwid  on-left floattop">
-            <%= render current_user.items %>
+          <div class="container on-left lmar tpad">
+            <div class="bgwh">
+              <pre><%= @old.inspect %></pre>
+          </div>
           </div>
         </div>
       </div>

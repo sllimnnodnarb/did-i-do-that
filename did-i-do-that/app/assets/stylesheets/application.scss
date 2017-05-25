@@ -88,16 +88,16 @@
 
 .efont {
   color: black;
+  font-size: 16pt;
   text-decoration: none;
   border: 2px solid #FFF;
 }
 
 .efont:hover {
   color: black;
-
   background-color: #FFF;
-  text-decoration: line-through;
   border: 2px solid #FFF;
+  text-decoration: none;
 }
 
 .ffont {
@@ -105,6 +105,34 @@
   background-color: #FFF;
   text-decoration: none;
 }
+
+.ffont:hover {
+  color: black;
+  background-color: #FFF;
+  text-decoration: line-through;
+}
+
+.gfont {
+  color: black;
+  background-color: #FFF;
+  text-decoration: none;
+  font-size: 16pt;
+}
+
+.gfont:hover {
+  color: black;
+  background-color: #FFF;
+  text-decoration: line-through;
+}
+
+.bpad {
+  padding-bottom: 5px;
+}
+
+.tpad {
+  padding-top: 5px;
+}
+
 .ifont {
   font-style: italic;
   font-family: 'Shadows Into Light', cursive;
@@ -119,6 +147,10 @@
   font-weight: bold;
   font-size: 14pt;
   text-shadow: -2px 2px #FFF;
+}
+
+.iifont {
+  font-style: italic;
 }
 
 .on-top {
@@ -197,6 +229,14 @@ body {
   font-family: inherit;
 }
 
+.lmar {
+  margin-left: 200px;
+}
+
+.lmar2 {
+  margin-left: 40px;
+}
+
 ul.nav.nav-tabs {
   background-color: #FFF;
   width: 100%;
@@ -244,13 +284,4 @@ ul {
 
 .lefttab {
   margin-left: 10px;
-}
-
-.special {
-  color: black;
-}
-.special:hover {
-  color: black;
-  cursor: url(http://vietnamcondotel.net/wp-content/uploads/2015/12/icon-check-150x150.png);
-  text-decoration: none;
 }
