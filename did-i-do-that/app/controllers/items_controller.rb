@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    @items = Item.uncompleted
+    @users = User.all
   end
 
   def show
@@ -30,11 +31,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:user_id])
+    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:user_id])
+    @item = Item.find(params[:id])
     @item.assign_attributes(item_params)
 
     if @item.save
@@ -48,9 +49,7 @@ class ItemsController < ApplicationController
 
    def destroy
      @item = Item.find(params[:id])
-     @old = []
-     @old << @item.name.dup
-     if @item.destroy
+     if @item.update_attribute(:completed, true)
        flash[:notice] = "\"#{@item.name}\" was successfully removed from your to-do list."
        redirect_to root_path
      else

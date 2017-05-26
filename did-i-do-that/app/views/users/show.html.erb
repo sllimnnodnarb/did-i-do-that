@@ -1,32 +1,28 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="media">
-        <br>
-        <% avatar_url = @user.avatar_url(128) %>
-        <div class="pull-left">
-          <%= image_tag avatar_url, class: 'pull-left' %>
-        </div>
-        <small>
-          <%= pluralize(@user.items.count, 'to-do items') %>
-        </small>
-        <div class="container">
-        </div>
-        <div class="row">
-          <div class="media-body">
-            <h2 class="media-heading ifont cc on-bottom">Productivity</h2><br>
-            <h4 class="media-heading cc iifont cc on-bottom">An at-a-glance history of every task you've ever done. <strong>In your entire life...</strong></h4><br>
-          </div>
-          <div class="col-md-4 abs">
-            <h4>Oh the frustration of forgetting what needs to be done!  Life is hectic.  Making to-do lists is an effective method of getting things done. If you find yourself wondering<br><strong class="ifont2">Did i do that?</strong><br> Then make a list.<br>  Begin!</strong><h4>
-          </div>
-          <div class="container on-left lmar tpad">
-            <div class="bgwh">
-              <pre><%= @user.items.name %></pre>
-          </div>
-          </div>
-        </div>
+<div class="container posrel aawid">
+  <div class="media ">
+    <%= image_tag current_user.avatar_url(128), class: 'pull-left' %>
+    <small>
+      <%= pluralize(current_user.items.uncompleted.count, 'to-do items') %>
+    </small>
+    <div class="iifont tpad on-top">
+      <p class="tpad">An at-a-glance history of every task you've ever done. <strong>In your entire life...</strong></p>
+    </div>
+  </div>
+</div>
+<div class="container dwid">
+  <div class="col-md-8">
+    <div class="container on-left">
+      <h2 class="ifont on-bottom">Current To-Do Items</h2>
+    <div class="bgwh lpad on-left cpad">
+      <h4><%= render @items %></h4>
+    </div>
+    <div class="bmar"><br></div>
+    <div class=""></div>
+      <h2 class="ifont on-bottom">Items From The Past</h2>
+      <div class="bgwh lpad on-left cpad">
+        <%= render @completed_items %>
       </div>
     </div>
   </div>
+  </div class="container bmar on-bottom"></div>
 </div>

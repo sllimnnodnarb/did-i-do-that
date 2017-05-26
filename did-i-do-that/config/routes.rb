@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'items/index'
 
+  get 'items/edit'
+
   get 'users/new'
 
   get 'users/show'

@@ -10,7 +10,7 @@ users = User.all
 20.times do
   item = Item.create!(
     user: users.sample,
-    name: Faker::Name.name,
+    name: Faker::ChuckNorris.fact,
   )
   item.update_attributes!(created_at: 10.days.ago)
 end

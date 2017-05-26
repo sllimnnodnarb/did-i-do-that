@@ -1,22 +1,23 @@
-<div class="container">
+
   <div class="row">
     <div class="col-md-6 awid">
       <%= image_tag("urkel2.png", :alt => "urkel", class: "aimg") %>
     </div>
   </div>
-    <div class="col-md-6 bline bwid">
-      <div class="container on-left">
-        <h1 class="ifont">Did I Do That?</h1>
-        <div class="on-bottom"></div>
-        <p>Life is busy.  Make a checklist.  Live well.</p>
-      </div>
-      <div class="container on-left">
-        <div class="bgwh">
-          <%= render current_user.items %>
-        </div>
-      </div>
-      <div class="hightop cc">
-        <%= link_to "Add a to-do item", new_item_path, class: 'btn-lg dfont' %>
-      </div>
+  <div class="col-md-6 bline fixwid">
+    <div class="container on-left">
+      <h1 class="ifont">Did I Do That?</h1>
+      <div class="on-bottom"></div>
+      <p>Life is busy.  Make a checklist.  Live well.</p>
+    </div>
+    <div class="container on-left bmar">
+      <div class="bgwh lwpad">
+        <%= render current_user.items.uncompleted %>
+      <div class="bmar tmar"></div>
     </div>
   </div>
+  <%= link_to "Add a to-do item", new_item_path, class: 'btn-lg dfont bmar' %>
+  <div class="bmar"></div>
+
+<div class="bmar"></div>
+<div class="bmar2"></div>

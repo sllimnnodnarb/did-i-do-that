@@ -1,9 +1,11 @@
-<div class="container cc">
-<div class="row cc">
-<h1 class="ifont cc">Edit Item</h1><br>
-
-  <div class="col-md-8 cc">
-    <%= render partial: "form", locals: {item: @item}, class: "cc" %>
+<div class="container">
+  <div class="col-md-6 bline ">
+    <div class="container on-left">
+    <h1 class="ifont">Edit To-Do Item</h1>
+    <div class="on-bottom"></div>
+      <div class="tpad">
+        <%= render partial: "form", locals: {item: @item}, class: "cc" %>
+      </div>
+    </div>
   </div>
-</div>
 </div>

@@ -1,8 +1,23 @@
-<h1><%= @item.name %></h1><br>
-  <small>
-    created <%= time_ago_in_words(@item.created_at) %> ago by <%= @item.user.email %>
-  </small>
-  <div class="col-md-4">
-      <%= link_to "Edit", edit_item_path(@item), class: 'btn btn-success' %>
-  </div>
+<div class="container bwid on-left">
+    <div class="col-md-8">
+      <div class="media">
+        <div class="row">
+          <div class="media-body">
+            <h2 class="media-heading ifont cc on-bottom">#{@item.name}</h2><br>
+          </div>
+          <div class="col-md-4 abs">
+          </div>
+          <div class="container on-left lmar tpad">
+            <div class="bgwh">
+              <% avatar_url = @user.avatar_url(24) %>
+              <div class="pull-left">
+                <%= image_tag avatar_url, class: 'pull-left' %>
+              </div>
+              <%= render current_user.items %>
+            </div>
+          </div>
+        </div>
+        <div class="bmar"><br></div>
+      </div>
+    </div>
 </div>

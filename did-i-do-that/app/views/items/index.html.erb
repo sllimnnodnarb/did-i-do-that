@@ -1,13 +1,25 @@
-<div class="container">
-  <h1 class="ifont">To-Do Items</h1>
-<br>
-<%= link_to "Create a New To-Do Item", new_item_path, class: 'btn btn-default' %>
-<br><br>
-<div class="row">
-  <div class="col-md-8">
-      <% @items.each do |item| %>
-        <%= render partial: 'item', locals: { item: item } %>
-      <% end %>
+<div class="posrel lmar3">
+    <h4>Oh the frustration of forgetting what needs to be done!  Life is hectic.  Making to-do lists is an effective method of getting things done. If you find yourself wondering<br><strong class="ifont2">Did i do that?</strong><br> Then make a list.<br>  Begin!</strong><h4>
+    <div class="bmar"></div>
+    <%= link_to "Start now", new_item_path, class: 'btn-lg dfont' %>
+</div>
+<div class="container on-left ewid">
+    <h1 class="ifont fullwid">What's Everyone Doing?</h1>
+    <div class="on-bottom"></div>
+    <div class="container">
+      <div class="bgwh">
+        <% @items.each do |item| %>
+          <h4 class="lmar2">
+            <%= link_to "", items_path, class: "glyphicon glyphicon-record efont" %>
+            <%= item.name %>
+            <% if current_user == item.user %>
+              <%= link_to "| Edit", edit_item_path(item), class: "lefttab bbbfont" %>
+            <% end %>
+          </h4>
+
+          <small class="lmar2">submitted by<%= item.user.email %></small>
+
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
-</div>

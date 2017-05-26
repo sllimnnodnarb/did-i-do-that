@@ -59,6 +59,21 @@
   font-weight: 900;
 }
 
+.bbbfont {
+  color: #000;
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 8pt;
+}
+
+.bbbfont:hover {
+  color: black;
+  text-decoration: none;
+  border: 2px solid #A9F9FE;
+  font-weight: 900;
+}
+
 .cfont {
   color: #000;
   border: 2px solid #A9F9FE;
@@ -175,15 +190,51 @@
 }
 
 .awid {
-  width: 25%;
-  position: absolute;
+  max-width: 100px;
+  height: 75px;
+  position: relative;
+  float: left;
+  margin-top: 5%;
+}
+
+.aawid {
+  width: 150px;
+  height: 75px;
+  position: relative;
+  float: left;
   margin-top: 15%;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 .bwid {
-  margin-left: 17%;
+  margin-left: 15%;
+  position: fixed;
+  margin-top: 5%;
+}
+
+.testwid {
+  margin-left: 15%;
   position: relative;
+  margin-top: 5%;
+}
+
+.fixwid {
+  margin-left: 200px;
+  position: fixed;
+}
+
+.flttop {
+  float: top;
+}
+
+.lwpad {
+  padding-bottom: 3px;
+}
+
+.hmwid {
+  margin-left: 150px;
+  position: relative;
+  float: left;
   margin-top: 5%;
 }
 
@@ -194,15 +245,26 @@
   padding-left: 25px;
 }
 
+.dwid {
+  margin-left: 125px;
+  position: relative;
+  margin-top: 5%;
+}
+
+.ewid {
+  margin-left: 160px;
+  position: relative;
+  margin-top: 5%;
+}
+
 .bline {
   position: relative;
 }
 
 .aimg {
-  max-width: 100%;
-  min-width: 50%;
   height: auto;
-  width: auto\9;
+  position: fixed;
+  margin-right: 5px;
 }
 
 .center {
@@ -217,6 +279,7 @@
 
 body {
   background-color: #A9F9FE;
+  overflow: visible;
 }
 
 .bgwh {
@@ -235,6 +298,29 @@ body {
 
 .lmar2 {
   margin-left: 40px;
+}
+
+.lmar3 {
+  margin-left: 10px;
+}
+
+.rmar {
+  margin-right: 10px;
+}
+
+.tmar2 {
+
+}
+
+.fulwid {
+  width: 100%;
+}
+
+.posrel {
+  position: fixed;
+  float: left;
+  width: 150px;
+  margin-top: 5%;
 }
 
 ul.nav.nav-tabs {
@@ -275,6 +361,43 @@ ul {
   position: relative;
   float: left;
   margin-bottom: 5%;
+}
+
+.bmar {
+  margin-bottom: 25px;
+}
+
+.bmar2 {
+  margin-bottom: 15px;
+}
+
+.tmar {
+  margin-top: 5%;
+}
+
+.tmar2 {
+  margin-top: 15px;
+}
+
+.tmar3 {
+  margin-top: 30px;
+}
+
+.tpad {
+  padding-top: 5%;
+}
+
+.tpad2 {
+  padding-top: 15px;
+}
+
+.cpad {
+  padding-bottom: 2px;
+}
+
+.ppad {
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .floattop {

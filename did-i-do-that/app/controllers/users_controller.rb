@@ -25,7 +25,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @items = @current_user.items
+    @users = User.all
+    @items = current_user.items.uncompleted
+    @completed_items = current_user.items.completed
   end
 end
